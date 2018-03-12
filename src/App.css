@@ -1,0 +1,226 @@
+
+ body {
+  background-repeat: no-repeat;
+  background: url('./img/bg.jpg');
+  background-size: 50% 50%;
+ }
+
+ /* 
+  * POST-IT CSS https://mentormate.com/blog/css-postit-note/
+  *
+  */
+
+ .notification-listitem {
+  line-height: 1;
+  text-align:center;     
+  width: 275px;    
+  margin: 15px;    
+  min-height:250px;
+  max-height:250px;
+  position:relative;   
+  border:1px solid #E8E8E8;  
+  border-top:60px solid #fdfd86;
+  font-family:'Reenie Beanie';    
+  font-size:2em;      
+  border-bottom-right-radius: 60px 5px;
+  display:inline-block;    
+   background: #ffff88; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(81%,#ffff88), color-stop(82%,#ffff88), color-stop(82%,#ffff88), color-stop(100%,#ffffc6)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* IE10+ */
+background: linear-gradient(135deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+ 
+.notification-listitem:after {     
+   content: "";
+  position:absolute;
+  z-index:-1;
+  right:-0px; bottom:20px;
+  width:200px;
+  height: 25px;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow:2px 15px 5px rgba(0, 0, 0, 0.40);
+-moz-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+ -webkit-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+      -o-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+     -ms-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+         transform: matrix(-1, -0.1, 0, 1, 0, 0);
+}
+
+.notification-listitem-content > p, h4, span {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+}
+
+.notification-listitem:hover {
+  font-weight: bolder;
+}
+
+.notification-listitem-content > p {
+  height: 140px;
+  margin-bottom: 1em;
+}
+
+.notification-listitem-content {
+  height: 140px;
+}
+
+.notification-listitem-user {
+  color: gray;
+}
+
+.top-nav-header {
+  float: left;
+  color: white;
+}
+
+.top-nav {
+  z-index: 1;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav-container {
+  width: 40em;
+  margin: auto;
+}
+
+.top-nav-userbar {
+  float: left;
+  margin: 0;
+  margin-left: 1em;
+}
+
+.response-list {
+  padding: 0;
+  border: black solid 1px;
+  height: 20em;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.response-item {
+  list-style: none;
+  border-top: black solid 1px;
+}
+
+.response-item > span {
+  color: gray;
+  margin-left: 1em;
+}
+
+.response-item > p {
+  margin-left: 1em;
+}
+
+.top-nav-userbar li {
+  float: right;
+  padding: 2em;
+  list-style: none;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.top-nav-userbar li:hover {
+  background: #ddd;
+  color: black;
+}
+
+.notifications-container {
+  padding: 16px;
+  margin-top: 3em;
+}
+
+.modal {
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.modal-content-login, .modal-content-register, .modal-content-adder {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content-login > input {
+  width: 50%;
+  padding: 10px;
+  margin: 0.5em 0 0.5em 0;
+}
+
+.modal-content-register > input {
+  width: 50%;
+  padding: 10px;
+  margin: 0.5em 0 0.5em 0;
+}
+
+.modal-content-adder > input {
+  width: 50%;
+  padding: 5px;
+  margin: 5px;
+}
+
+.modal-content-adder > textarea {
+  width: 80%;
+  height: 4em;
+  padding: 10px;
+  margin: 5px;
+}
+
+.response-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.response-form > textarea {
+  width: 100%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.feedback {
+  color: red;
+}
+
+#credit {
+  margin: 1em;
+}
